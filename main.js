@@ -1,3 +1,8 @@
+function Loading() {
+    document.getElementById("container-load").style.display = "none"
+    document.getElementById("content").style.display = "block"
+}
+
 class MobileNavbar {
     constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
