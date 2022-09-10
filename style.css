@@ -226,7 +226,7 @@ nav {
   width: 150px;
   height: 150px;
   margin: 0 30px 0 150px;
-  animation: sushi 3s ease-in-out infinite;
+  animation: sushi 3s linear infinite;
 }
 
 .img-sushi {
@@ -394,7 +394,7 @@ nav {
 }
 
 .chef img {
-  width: 300px;
+  width: 350px;
   height: 500px;
   display: block;
   margin: auto;
@@ -427,7 +427,17 @@ nav {
   margin-left: 10px;
 }
 
+#Pratos {
+  display: flex;
+  padding: 0 80px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .nosso-menu {
+  width: 100%;
   padding: 30px 0;
   margin-top: 40px;
 }
@@ -440,13 +450,18 @@ nav {
 }
 
 #entradas {
- width: 100vw;
- margin: 15px 0 0 0;
- padding: 15px 0 0 0;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  display: flex;
+  max-width: 100vw;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-entra {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #entradas h1 {
@@ -457,56 +472,78 @@ nav {
 }
 
 .entrada-1, .entrada-2, .prt-1, .almoco, .sobre-1, .sobre-2 {
-  color: var(--cor-2);
-  margin: 10px 0;
+  margin: 0;
   text-align: center;
+  color: var(--cor-2);
 }
+
 .entrada-1 img {
   width: 400px;
   height: 400px;
 }
+
 .entrada-2 img {
   width: 400px;
   height: 400px;
 }
+
 #prato-principal {
- width: 100vw;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+.container-entra-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 #prato-principal h1 {
   width: 100%;
   color: var(--cor-2);
   text-align: center;
-  margin-top: 60px;
+  margin: 50px 0 20px;
 }
+
 .prt-1 img {
   width: 400px;
   height: 400px;
 }
+
 .almoco img {
   width: 400px;
   height: 400px;
 }
+
 #sobremesa {
- width: 100vw;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+.container-entra-3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 #sobremesa h1 {
   width: 100%;
   color: var(--cor-2);
   text-align: center;
-  margin-top: 50px;
+  margin: 50px 0 20px;
 }
+
 .sobre-1 img {
   width: 400px;
   height: 400px;
 }
+
 .sobre-2 img {
   width: 400px;
   height: 400px;
@@ -518,6 +555,64 @@ footer p {
   color: var(--cor-2);
   text-align: center;
   font-style: italic;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #Pratos {
+    display: flex;
+    padding: 0 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 998px) {
+  .Sobre-nos {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 50px;
+    padding: 0;
+  }
+  
+  .img-hashi {
+    width: 150px;
+    height: 150px;
+    margin: 0 30px;
+    animation: sushi 3s linear infinite;
+  }
+  
+  .img-sushi {
+    width: 200px;
+    height: 90px;
+    margin: 40px 0;
+  }
+  
+  @keyframes sushi {
+    from {
+      transform: translateY(35px);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+  
+  .text-sobre h1 {
+    color: var(--cor-2);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-sobre p {
+    max-width: 1000px;
+    color: var(--cor-2);
+    text-align: justify;
+  }
 }
 
 
@@ -542,6 +637,105 @@ footer p {
     width: 36px;
     cursor: pointer;
     margin-left: 30px;
+  }
+}
+
+
+@media screen and (max-width: 940px) {
+  .entrada-1 img {
+    width: 380px;
+    height: 380px;
+  }
+  
+  .entrada-2 img {
+    width: 380px;
+    height: 380px;
+  }
+  
+  .prt-1 img {
+    width: 380px;
+    height: 380px;
+  }
+  
+  .almoco img {
+    width: 380px;
+    height: 380px;
+  }
+  
+  .sobre-1 img {
+    width: 380px;
+    height: 380px;
+  }
+  
+  .sobre-2 img {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+
+@media screen and (max-width: 890px) {
+  .entrada-1 img {
+    width: 370px;
+    height: 370px;
+  }
+  
+  .entrada-2 img {
+    width: 370px;
+    height: 370px;
+  }
+  
+  .prt-1 img {
+    width: 370px;
+    height: 370px;
+  }
+  
+  .almoco img {
+    width: 370px;
+    height: 370px;
+  }
+  
+  .sobre-1 img {
+    width: 370px;
+    height: 370px;
+  }
+  
+  .sobre-2 img {
+    width: 370px;
+    height: 370px;
+  }
+}
+
+
+@media screen and (max-width: 870px) {
+  .entrada-1 img {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .entrada-2 img {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .prt-1 img {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .almoco img {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .sobre-1 img {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .sobre-2 img {
+    width: 360px;
+    height: 360px;
   }
 }
 
@@ -617,5 +811,207 @@ footer p {
 
   .mobile-menu.active .line-3 {
     transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .Sobre-nos {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 50px;
+    padding: 0;
+  }
+  
+  .img-hashi {
+    width: 150px;
+    height: 150px;
+    margin: 0 30px;
+    animation: sushi 3s linear infinite;
+  }
+  
+  .img-sushi {
+    width: 200px;
+    height: 90px;
+    margin: 40px 40px 40px 0;
+  }
+  
+  @keyframes sushi {
+    from {
+      transform: translateY(35px);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+  
+  .text-sobre h1 {
+    color: var(--cor-2);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-sobre p {
+    max-width: 1000px;
+    color: var(--cor-2);
+    text-align: justify;
+  }
+
+  #entradas {
+    display: flex;
+    max-width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container-entra {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #prato-principal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-entra-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #sobremesa {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-entra-3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .entrada-1 img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .entrada-2 img {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+  }
+  .prt-1 img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .almoco img {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+  }
+  .sobre-1 img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .sobre-2 img {
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+  }
+
+  .sobre-2 p {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .Sobre-nos {
+    padding: 0;
+    display: flex;
+    max-width: 100%;
+    margin: 30px 50px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sobre-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img-hashi {
+    width: 150px;
+    height: 150px;
+    margin: 0 0 10px;
+    animation: sushi 3s linear infinite;
+  }
+  
+  .img-sushi {
+    width: 200px;
+    height: 90px;
+    margin: 30px 0 20px;
+  }
+  
+  @keyframes sushi {
+    0% {
+      transform: translateY(35px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(35px);
+    }
+  }
+  
+  .text-sobre h1 {
+    color: var(--cor-2);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-sobre p {
+    max-width: 1000px;
+    color: var(--cor-2);
+    text-align: justify;
+  }
+
+  .sushi-man {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .chef-1 {
+    margin-right: 0;
+  }
+  
+  .chef-2 {
+    margin-left: 0;
+  }
+
+  .chef h3 {
+    color: var(--cor-2);
+    margin: 10px 0 20px;
+    text-align: center;
   }
 }

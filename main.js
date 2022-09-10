@@ -1,3 +1,4 @@
+    //Criando uma página de pré-carregamento para o site
 function Loading() {
     document.getElementById("container-load").style.display = "none"
     document.getElementById("content").style.display = "block"
